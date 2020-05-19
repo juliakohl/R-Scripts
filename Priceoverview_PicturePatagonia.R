@@ -13,7 +13,7 @@ titles <- html_text(titles_html)
 prices_html <- html_nodes(webpage, "strong.price.is_product_price")
 prices <- html_text(prices_html)
 
-prices <- str_replace_all(prices, "[,??? ]" , "") 
+prices <- str_replace_all(prices, "[,€ ]" , "") 
 
 i <- 1
 prices_num <- c()
@@ -40,7 +40,7 @@ titles_2 <- html_text(titles_html_2)
 prices_html_2 <- html_nodes(webpage_2, "strong.price.is_product_price")
 prices_2 <- html_text(prices_html_2)
 
-prices_2 <- str_replace_all(prices_2, "[,??? ]" , "") 
+prices_2 <- str_replace_all(prices_2, "[,€ ]" , "") 
 
 i <- 1
 prices_num_2 <- c()
